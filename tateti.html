@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="./tateti.js" type="text/javascript"></script>
+    <style>
+    .grid-container {
+        display : grid; /*inline-grid*/
+        height: 200px;
+        width: 200px;
+        grid-gap:10px;
+        grid-template-columns: repeat(3, 60px);
+        grid-template-rows: repeat(3, 60px);
+        background-color: #000000;
+        margin-left: 10%;
+        margin-top: 10%;
+    }
+    
+    .grid-container > div {
+        background-color: #ffffff;
+        text-align: center;
+        padding: 20px 0;
+        font-size: 30px;
+    }
+    </style>
+</head>
+<body>
+<div class="grid-container" id='tateti'></div>
+<br>
+<div style='margin-left: 10%'>
+<button type="button" onclick="buildTable()">Nueva partida</button>
+<p id='ganador'>Ganador: </p>
+</div>
+</body>
+
+</html>
