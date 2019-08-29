@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="./sudoku.js" type="text/javascript"></script>
+    <style>
+    .grid-container {
+        display : inline-grid; /*inline-grid*/
+        height: 126px;
+        width: 126px;
+        border: solid #000000 5px;
+        grid-gap:2px;
+        grid-template-columns: repeat(3, 40px);
+        grid-template-rows: repeat(3, 40px);
+        background-color: #000000;
+        margin-bottom: 4px;
+    }
+    
+    .grid-container > div {
+        background-color: #ffffff;
+        text-align: center;
+        padding: 20px 0;
+        font-size: 30px;
+    }
+    </style>
+</head>
+<body>
+<div class="grid-container" id='sudoku1'></div>
+<div class="grid-container" id='sudoku2'></div>
+<div class="grid-container" id='sudoku3'></div>
+<br>
+<div class="grid-container" id='sudoku4'></div>
+<div class="grid-container" id='sudoku5'></div>
+<div class="grid-container" id='sudoku6'></div>
+<br>
+<div class="grid-container" id='sudoku7'></div>
+<div class="grid-container" id='sudoku8'></div>
+<div class="grid-container" id='sudoku9'></div>
+<br>
+<div style='margin-left: 10%'>
+<button type="button" onclick="buildTable()">Nueva partida</button>
+</div>
+</body>
+
+</html>
