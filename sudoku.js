@@ -20,7 +20,7 @@ function pressButton(id){
     
     // Puts value on the defined square
     if(valueOnDiv == ''){
-        document.getElementById(id).innerHTML = markValue;
+        document.getElementById(id).innerHTML = document.getElementById(id).innerHTML + 1 ;
     }
 
     // Builds array with values on screen
@@ -32,11 +32,17 @@ function pressButton(id){
 }
 
 function buildTable(){
+    let newGame = game();
+    var value = 0;
     for(n = 1; n <= 9; n++ ){
         let textGrid = '';
         for(i = 1; i <= 9; i++ ){
             textGrid = textGrid+"<div id='sudoku"+n+'-'+i+"' onClick='pressButton(this.id)'></div>";
         }
         document.getElementById('sudoku'+n).innerHTML = textGrid;
+    }
+
+    for(i = 0; i <= 81; i++){
+        
     }
 }   
